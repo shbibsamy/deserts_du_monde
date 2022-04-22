@@ -68,7 +68,7 @@ main {
     /* Adding border to bottom of presentation section */
     .presentation {
         border-bottom: 1px solid gray;
-        padding: none;
+        padding: 0px;
     }
 
     /* Second section */
