@@ -1,0 +1,205 @@
+@import url("header.css");
+@import url("lightbox.css");
+
+/* Reset */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* General styles */
+span,
+p,
+li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Containers */
+body {
+    max-width: 100%;
+}
+
+main {
+    margin: 0%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0% 5% 0%;
+    padding: 1rem;
+    border-top: 1px solid gray;
+}
+
+/* Mobile first */
+/* Main text and photo */
+.presentation {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border-bottom: none;
+}
+
+.presentation h2 {
+    margin: 5%;
+    text-align: center;
+}
+
+.presentation img {
+    max-width: 100%;
+}
+
+.presentation p {
+    margin: 5% 0% 0% 0%;
+}
+
+/* hiding top 5 and galerie */
+.plus {
+    display: none;
+}
+
+/* if on tablet */
+@media (min-width: 512px) and (max-width: 1024px) {
+
+    /* Adding border to bottom of presentation section */
+    .presentation {
+        border-bottom: 1px solid gray;
+        padding: none;
+    }
+
+    /* Second section */
+    .plus {
+        margin: 5%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .presentation h2 {
+        font-size: 3vw;
+    }
+
+    /* Top 5 deserts */
+    .plus-top5 {
+        width: 40%;
+        margin: 1rem;
+    }
+
+    .plus ol {
+        border-top: 1px solid gray;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    /* galerie */
+    .plus-galerie {
+        width: 60%;
+        margin: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .galerie-images {
+        border-top: 1px solid gray;
+        padding: 1rem 0rem 1rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .plus-galerie img {
+        max-width: 3rem;
+        margin: 1px;
+    }
+}
+
+/* If on desktop */
+@media (min-width: 1025px) {
+
+    /* Main body styles for desktop */
+    body {
+        max-width: 100%;
+        background-color: gray;
+    }
+
+    .container {
+        width: 70%;
+        margin: auto;
+        background-color: white;
+    }
+
+    main {
+        margin: 0%;
+        padding: 1rem 1rem 0rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid gray;
+        border-bottom: none;
+    }
+
+    /* Presentation area with photo and text */
+    .presentation {
+        margin: 0% 2rem 0% 2rem;
+        display: flex;
+        flex-direction: column; 
+        flex-basis: 65%;
+        border-bottom: none;
+        padding: 0%;
+    }
+
+    .presentation h2 {
+        margin: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .presentation img {
+        max-width: 100%;
+        align-self: center;
+    }
+
+    /* secondary section for top 5 and galerie */
+    .plus {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 35%;
+    }
+
+    .plus-top5 {
+        width: 90%;
+    }
+
+    .plus h2 {
+        flex: 1;
+        margin: 1rem;
+    }
+
+    .plus ol {
+        border-top: 1px solid gray;
+        padding-top: 1rem;
+    }
+
+    .plus-galerie {
+        margin-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .galerie-images {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid gray;
+        padding: 1rem 0rem 1rem 0rem;
+    }
+
+    .plus-galerie img {
+        width: 3rem;
+        margin: 1px;
+    }
+
+}
